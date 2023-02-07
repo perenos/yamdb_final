@@ -19,9 +19,8 @@ from .mixins import ListCreateDestroyViewSet
 from .permissions import AuthenticatedPrivilegedUsersOrReadOnly, IsAdmin
 from .serializers import (CategorySerializer, CommentSerializer,
                           CreateTitleSerializer, GenreSerializer,
-                          ReviewSerializer, SignUpSerializer,
-                          TitleSerializer, TokenSerializer,
-                          UserSerializer)
+                          ReviewSerializer, SignUpSerializer, TitleSerializer,
+                          TokenSerializer, UserSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):
