@@ -4,12 +4,8 @@ from django.core.exceptions import ValidationError
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from rest_framework import serializers
-from reviews.models import (Category,
-                            Comment,
-                            Genre,
-                            Review,
-                            Title)
-from users.models import User, MAX_LENGTH_EMAIL, MAX_LENGTH_NAME
+from reviews.models import Category, Comment, Genre, Review, Title
+from users.models import MAX_LENGTH_EMAIL, MAX_LENGTH_NAME, User
 
 
 class SignUpSerializer(serializers.ModelSerializer):
@@ -22,11 +18,7 @@ class SignUpSerializer(serializers.ModelSerializer):
 
     def validate_username(self, value):
         name = value.lower()
-        if name == 'me':
-            raise serializers.ValidationError(
-                'Невозможно создать пользователя с именем me'
-            )
-        elif re.fullmatch(r'^[\w.@+-]+\Z', value):
+        if name != 'me' and re.fullmatch(r'^[\w.@+-]+\Z', value):
             return value
         raise serializers.ValidationError(
             'Невозможно создать пользователя с таким набором симвлолов'

@@ -1,7 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-
 MAX_LENGTH_NAME = 150
 MAX_LENGTH_CODE = 255
 MAX_LENGTH_ROLE = 10
