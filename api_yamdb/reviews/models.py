@@ -2,10 +2,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils import timezone
-
 from reviews.validators import validate_year
 from users.models import User
-
 
 MAX_LENGTH_FOR_CHARFIELD: int = 256
 MAX_LENGTH_FOR_SLUG: int = 50
