@@ -3,7 +3,7 @@ name: Workflow for test, build and deploy
 on: [push]
 
 jobs:
-  test:
+  tests:
     # Create virtual environment with latest Ubuntu
     runs-on: ubuntu-latest
 
