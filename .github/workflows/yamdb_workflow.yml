@@ -32,14 +32,7 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         pytest
-    
-    uses: emibcn/badge-action@v2.0.2
-    with:
-      label: 'Test coverage'
-      status: '53.4%'
-      color: 'blue,555,daf'
-      path: '.github/badges/coverage.svg'
-  
+      
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
