@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='asdfg')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'web', '84.201.155.156', 'otzovik.sytes.net',
+    'web:8000', '84.201.155.156', 'otzovik.sytes.net',
     'localhost', '127.0.0.1',
 ]
 
