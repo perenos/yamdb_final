@@ -1,4 +1,4 @@
 # yamdb_final
 yamdb_final with workflow
 
-![Action Status](https://github.com/D-Abramoc/yamdb_final/.github/workflows/Workflow%20for%20test,%20build%20and%20deploy/badge.svg)
+![Workflow for test, build and deploy](https://github.com/D-Abramoc/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
