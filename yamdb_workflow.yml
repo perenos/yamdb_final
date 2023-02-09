@@ -52,10 +52,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final
   
   deploy:
-    on:
-      push:
-        branches:
-          - master
+    if: github.ref == 'refs/head/master'
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
