@@ -1,12 +1,7 @@
 name: Workflow for test, build and deploy
 
-on:
-  push:
-    branches: 
-      - '*'
-  pull_request:
-    branches:
-      - 'master'
+on: [push]
+
 
 jobs:
   tests:
