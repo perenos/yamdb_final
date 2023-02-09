@@ -50,6 +50,10 @@ jobs:
           context: api_yamdb/
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final
+
+on:
+  push:
+    branches: [ master ]
   
   deploy:
     runs-on: ubuntu-latest
