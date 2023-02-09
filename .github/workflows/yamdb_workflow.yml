@@ -51,14 +51,10 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final
 
-on:
-  push:
-    branches: [ master ]
-  
   deploy:
+    if: ${{ github.ref == 'refs/head/master' }}
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
-    if: github.repository == 'yamdb_final/master'
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
