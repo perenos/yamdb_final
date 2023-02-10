@@ -23,6 +23,8 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         # запуск проверки проекта по flake8
+        tuche .env
+        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
         python -m flake8
         pytest
       
