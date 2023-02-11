@@ -13,6 +13,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
     
     - name: Install dependencis
       run: |
@@ -21,8 +22,6 @@ jobs:
         pip install -r api_yamdb/requirements.txt
     
     - name: Test with flake8 and django tests
-      environment:
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
         # запуск проверки проекта по flake8
         python -m flake8
